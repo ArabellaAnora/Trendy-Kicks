@@ -1586,11 +1586,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* end product area css
 ============================================================================================ */
+.flash-deal{
+  font-size: 15px;
+  line-height: 2;
+}
+
 .exclusive-deal-area {
   background: #f9f9ff; }
   .exclusive-deal-area .exclusive-left {
     position: realtive;
-    background: url(../img/exclusive.jpg) center no-repeat;
+    background: url(../img/exclusive2.jpg) center no-repeat;
     background-size: cover;
     text-align: center;
     padding: 275px 0; }
