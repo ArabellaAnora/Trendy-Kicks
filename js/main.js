@@ -563,3 +563,65 @@ $(document).ready(function(){
   
 
  });
+
+
+
+ //------- Additional JS Changes --------//
+ // Display only necessary shoes
+ 
+ 
+
+ //For the single product.html
+
+ const products = [
+  {
+    id:1,
+    name: "Nike Air Force 1",
+    image: "img/Products-Category/Product-Shoes-1.png",
+    description: "This is Product 1. It's a great shoe! Yehey",
+    price: "₱599.00",
+    availability: "In-Stock",
+    category: "Men's Shoes"
+  },
+
+
+
+ ];
+
+// Function to get the selected product's details by its ID
+function getProductById(id) {
+  return products.find(product => product.id === id);
+}
+
+// Function to populate the product detail page with the selected product's details
+function populateProductDetail() {
+  const productDetailContainer = document.querySelector(".s_product_text");
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = Number(urlParams.get("id"));
+  const selectedProduct = getProductById(productId);
+
+  if (selectedProduct) {
+    productDetailContainer.innerHTML = `
+      <h3>${selectedProduct.name}</h3>
+      <h2>${selectedProduct.price}</h2>
+      <ul class="list">
+        <li><a class="active" href="#"><span>Category</span>: ${selectedProduct.category}</a></li>
+        <!-- Add more product details here if needed -->
+      </ul> 
+      <p>${selectedProduct.description}</p>
+      <div class="product_count">
+        <!-- Add quantity selection and other product-related elements here if needed -->
+      </div>
+      <div class="card_area d-flex align-items-center">
+        <a class="primary-btn" href="#">Add to Cart</a>
+        <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
+        <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+      </div>
+    `;
+  } else {
+    productDetailContainer.innerHTML = "<p>Product not found.</p>";
+  }
+}
+
+// Call the function to populate the product detail page on load
+populateProductDetail();
