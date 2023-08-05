@@ -581,7 +581,130 @@ $(document).ready(function(){
     description: "This is Product 1. It's a great shoe! Yehey",
     price: "₱599.00",
     availability: "In-Stock",
-    category: "Men's Shoes"
+    category: "Men (Casual)"
+  },
+
+  {
+    id:2,
+    name: "Nike Mamba Fury",
+    image: "img/Products-Category/Product-Shoes-2.png",
+    description: "This is Product 1. It's a great shoe! Yehey",
+    price: "₱599.00",
+    availability: "In-Stock",
+    category: "Men (Basketball)"
+  },
+
+{
+    id:3,
+    name: "Nike Air Zoom Pegasus ",
+    image: "img/Products-Category/Product-Shoes-3.png",
+    description: "This is Product 1. It's a great shoe! Yehey",
+    price: "₱599.00",
+    availability: "In-Stock",
+    category: "Women (Running)"
+  },
+
+  {
+    id:4,
+    name: "Kobe 6 Protro",
+    image: "img/Products-Category/Product-Shoes-4.png",
+    description: "This is Product 1. It's a great shoe! Yehey",
+    price: "₱599.00",
+    availability: "In-Stock",
+    category: "Men (Basketball)"
+  },
+
+  {
+    id:5,
+    name: "Adidas Superstar",
+    image: "img/Products-Category/Product-Shoes-5.png",
+    description: "This is Product 1. It's a great shoe! Yehey",
+    price: "₱599.00",
+    availability: "In-Stock",
+    category: "Men (Casual)"
+  },
+
+
+  {
+    id:6,
+    name: "Adidas Yeezy 350 ",
+    image: "img/Products-Category/Product-Shoes-6.png",
+    description: "This is Product 1. It's a great shoe! Yehey",
+    price: "₱599.00",
+    availability: "In-Stock",
+    category: "Men (Running)"
+  },
+
+
+  {
+    id:7,
+    name: "PUMA Karmen Rebelle Trainers ",
+    image: "img/Products-Category/Product-Shoes-7.png",
+    description: "This is Product 1. It's a great shoe! Yehey",
+    price: "₱599.00",
+    availability: "In-Stock",
+    category: "Women (Casual)"
+  },
+
+
+  {
+    id:8,
+    name: "Converse Chuck Taylor All-Star",
+    image: "img/Products-Category/Product-Shoes-10.png",
+    description: "This is Product 1. It's a great shoe! Yehey",
+    price: "₱599.00",
+    availability: "In-Stock",
+    category: "Men (Casual)"
+  },
+
+  {
+    id:9,
+    name: "Onitsuka Tiger Mexico 66 SD for Men",
+    image: "img/Products-Category/Product-Shoes-12.png",
+    description: "This is Product 1. It's a great shoe! Yehey",
+    price: "₱599.00",
+    availability: "In-Stock",
+    category: "Men (Casual)"
+  },
+
+  {
+    id:10,
+    name: "Chunky Sketchers",
+    image: "img/Products-Category/Product-Shoes-8.png",
+    description: "This is Product 1. It's a great shoe! Yehey",
+    price: "₱599.00",
+    availability: "In-Stock",
+    category: "Women (Casual)"
+  },
+
+  {
+    id:11,
+    name: "Fila Disruptor",
+    image: "img/Products-Category/Product-Shoes-9.png",
+    description: "This is Product 1. It's a great shoe! Yehey",
+    price: "₱599.00",
+    availability: "In-Stock",
+    category: "Women (Casual)"
+  },
+
+  {
+    id:12,
+    name: "Vans Old Skool",
+    image: "img/Products-Category/Product-Shoes-13.png",
+    description: "This is Product 1. It's a great shoe! Yehey",
+    price: "₱599.00",
+    availability: "In-Stock",
+    category: "Men (Casual)"
+  },
+
+  {
+    id:13,
+    name: "New Balance 574",
+    image: "img/Products-Category/Product-Shoes-1.png",
+    description: "This is Product 1. It's a great shoe! Yehey",
+    price: "₱599.00",
+    availability: "In-Stock",
+    category: "Men (Casual)"
   },
 
 
@@ -595,6 +718,7 @@ function getProductById(id) {
 
 // Function to populate the product detail page with the selected product's details
 function populateProductDetail() {
+
   const productDetailContainer = document.querySelector(".s_product_text");
   const urlParams = new URLSearchParams(window.location.search);
   const productId = Number(urlParams.get("id"));
@@ -606,6 +730,7 @@ function populateProductDetail() {
       <h2>${selectedProduct.price}</h2>
       <ul class="list">
         <li><a class="active" href="#"><span>Category</span>: ${selectedProduct.category}</a></li>
+        <li><a class="active" href="#"><span>Availability</span>: ${selectedProduct.availability}</a></li>
         <!-- Add more product details here if needed -->
       </ul> 
       <p>${selectedProduct.description}</p>
@@ -623,5 +748,21 @@ function populateProductDetail() {
   }
 }
 
-// Call the function to populate the product detail page on load
-populateProductDetail();
+//calling the function to display the products
+
+  populateProductDetail();
+
+
+
+
+
+
+//Function that add a marker in the google map found in contact.html
+const lat = parseFloat(document.getElementById("mapBox").getAttribute("data-lat"));
+const lon = parseFloat(document.getElementById("mapBox").getAttribute("data-lon"));
+
+const map = L.map("mapBox").setView([lat, lon], 13);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+
+L.marker([lat, lon]).addTo(map);
