@@ -569,7 +569,28 @@ $(document).ready(function(){
  //------- Additional JS Changes --------//
  // Display only necessary shoes
  
- 
+ // For category.html
+//For Filtering of by brand
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  //For the single product.html
 
@@ -587,7 +608,7 @@ $(document).ready(function(){
   {
     id:2,
     name: "Nike Mamba Fury",
-    image: "img/Products-Category/Product-Shoes-2.png",
+    image: ["img/Products-Category/Product-Shoes-2.png","img/Products-Category/Product-Shoes-2.png","img/Products-Category/Product-Shoes-2.png",],
     description: "This is Product 1. It's a great shoe! Yehey",
     price: "₱599.00",
     availability: "In-Stock",
@@ -712,50 +733,88 @@ $(document).ready(function(){
  ];
 
 // Function to get the selected product's details by its ID
+// Function to get the selected product's details by its ID
 function getProductById(id) {
   return products.find(product => product.id === id);
 }
 
 // Function to populate the product detail page with the selected product's details
 function populateProductDetail() {
-
   const productDetailContainer = document.querySelector(".s_product_text");
+  const productImageCarousel = document.getElementById("productImageCarousel");
+
   const urlParams = new URLSearchParams(window.location.search);
   const productId = Number(urlParams.get("id"));
   const selectedProduct = getProductById(productId);
 
   if (selectedProduct) {
-    productDetailContainer.innerHTML = `
-      <h3>${selectedProduct.name}</h3>
-      <h2>${selectedProduct.price}</h2>
-      <ul class="list">
-        <li><a class="active" href="#"><span>Category</span>: ${selectedProduct.category}</a></li>
-        <li><a class="active" href="#"><span>Availability</span>: ${selectedProduct.availability}</a></li>
-        <!-- Add more product details here if needed -->
-      </ul> 
-      <p>${selectedProduct.description}</p>
-      <div class="product_count">
-        <!-- Add quantity selection and other product-related elements here if needed -->
-      </div>
-      <div class="card_area d-flex align-items-center">
-        <a class="primary-btn" href="#">Add to Cart</a>
-        <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
-        <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
-      </div>
-    `;
+      // Populate product details
+      productDetailContainer.innerHTML = `
+          <h3>${selectedProduct.name}</h3>
+          <h2>${selectedProduct.price}</h2>
+          <ul class="list">
+              <li><a class="active" href="#"><span>Category</span>: ${selectedProduct.category}</a></li>
+              <li><a class="active" href="#"><span>Availability</span>: ${selectedProduct.availability}</a></li>
+              <!-- Add more product details here if needed -->
+          </ul>
+          <p>${selectedProduct.description}</p>
+          <div class="product_count">
+              <!-- Add quantity selection and other product-related elements here if needed -->
+          </div>
+          <div class="card_area d-flex align-items-center">
+              <a class="primary-btn" href="#">Add to Cart</a>
+              <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
+              <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+          </div>
+      `;
+      const imageCarousel = productImageCarousel.querySelector(".s_Product_carousel");
+
+      // Clear existing carousel items
+      imageCarousel.innerHTML = "";
+
+      // Populate the image carousel with images of the selected product
+      selectedProduct.images.forEach(imageUrl => {
+          const carouselItem = document.createElement("div");
+          carouselItem.classList.add("single-prd-item");
+          carouselItem.innerHTML = `
+              <img class="img-fluid" src="${imageUrl}" alt="">
+          `;
+          imageCarousel.appendChild(carouselItem);
+      });
   } else {
-    productDetailContainer.innerHTML = "<p>Product not found.</p>";
+      productDetailContainer.innerHTML = "<p>Product not found.</p>";
   }
 }
 
-//calling the function to display the products
-
-  populateProductDetail();
-
+// Call the function to display the products
+populateProductDetail();
 
 
 
+  
 
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Contact.html
 
 //Function that add a marker in the google map found in contact.html
 const lat = parseFloat(document.getElementById("mapBox").getAttribute("data-lat"));
@@ -766,3 +825,10 @@ const map = L.map("mapBox").setView([lat, lon], 13);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
 L.marker([lat, lon]).addTo(map);
+
+
+
+
+
+
+

@@ -1650,6 +1650,10 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
 }
 
+/*category.html additional css*/
+
+
+
 /* end category area css
 ============================================================================================ */
 /* start product area css
@@ -3670,6 +3674,7 @@ label {
 .filter-bar {
   padding: 0px 20px 10px 20px;
   background: #828bb3;
+
 }
 .filter-bar a, .filter-bar i {
   color: #000;
