@@ -600,7 +600,7 @@ $(document).ready(function(){
     name: "Nike Air Force 1",
     image: "img/Products-Category/Product-Shoes-1.png",
     description: "This is Product 1. It's a great shoe! Yehey",
-    price: "₱599.00",
+    price: "₱999.00",
     availability: "In-Stock",
     category: "Men (Casual)"
   },
@@ -610,7 +610,7 @@ $(document).ready(function(){
     name: "Nike Mamba Fury",
     image: ["img/Products-Category/Product-Shoes-2.png","img/Products-Category/Product-Shoes-2.png","img/Products-Category/Product-Shoes-2.png",],
     description: "This is Product 1. It's a great shoe! Yehey",
-    price: "₱599.00",
+    price: "₱1,700.00",
     availability: "In-Stock",
     category: "Men (Basketball)"
   },
@@ -620,7 +620,7 @@ $(document).ready(function(){
     name: "Nike Air Zoom Pegasus ",
     image: "img/Products-Category/Product-Shoes-3.png",
     description: "This is Product 1. It's a great shoe! Yehey",
-    price: "₱599.00",
+    price: "₱1,883.00",
     availability: "In-Stock",
     category: "Women (Running)"
   },
@@ -640,7 +640,7 @@ $(document).ready(function(){
     name: "Adidas Superstar",
     image: "img/Products-Category/Product-Shoes-5.png",
     description: "This is Product 1. It's a great shoe! Yehey",
-    price: "₱599.00",
+    price: "₱1,499.00",
     availability: "In-Stock",
     category: "Men (Casual)"
   },
@@ -651,7 +651,7 @@ $(document).ready(function(){
     name: "Adidas Yeezy 350 ",
     image: "img/Products-Category/Product-Shoes-6.png",
     description: "This is Product 1. It's a great shoe! Yehey",
-    price: "₱599.00",
+    price: "₱1,645.42",
     availability: "In-Stock",
     category: "Men (Running)"
   },
@@ -662,7 +662,7 @@ $(document).ready(function(){
     name: "PUMA Karmen Rebelle Trainers ",
     image: "img/Products-Category/Product-Shoes-7.png",
     description: "This is Product 1. It's a great shoe! Yehey",
-    price: "₱599.00",
+    price: "₱1,699.00",
     availability: "In-Stock",
     category: "Women (Casual)"
   },
@@ -673,7 +673,7 @@ $(document).ready(function(){
     name: "Converse Chuck Taylor All-Star",
     image: "img/Products-Category/Product-Shoes-10.png",
     description: "This is Product 1. It's a great shoe! Yehey",
-    price: "₱599.00",
+    price: "₱655.00",
     availability: "In-Stock",
     category: "Men (Casual)"
   },
@@ -693,7 +693,7 @@ $(document).ready(function(){
     name: "Chunky Sketchers",
     image: "img/Products-Category/Product-Shoes-8.png",
     description: "This is Product 1. It's a great shoe! Yehey",
-    price: "₱599.00",
+    price: "₱1,596.00",
     availability: "In-Stock",
     category: "Women (Casual)"
   },
@@ -703,7 +703,7 @@ $(document).ready(function(){
     name: "Fila Disruptor",
     image: "img/Products-Category/Product-Shoes-9.png",
     description: "This is Product 1. It's a great shoe! Yehey",
-    price: "₱599.00",
+    price: "₱1,994.00",
     availability: "In-Stock",
     category: "Women (Casual)"
   },
@@ -713,7 +713,7 @@ $(document).ready(function(){
     name: "Vans Old Skool",
     image: "img/Products-Category/Product-Shoes-13.png",
     description: "This is Product 1. It's a great shoe! Yehey",
-    price: "₱599.00",
+    price: "₱1,650.00",
     availability: "In-Stock",
     category: "Men (Casual)"
   },
@@ -723,7 +723,7 @@ $(document).ready(function(){
     name: "New Balance 574",
     image: "img/Products-Category/Product-Shoes-1.png",
     description: "This is Product 1. It's a great shoe! Yehey",
-    price: "₱599.00",
+    price: "₱655.00",
     availability: "In-Stock",
     category: "Men (Casual)"
   },
