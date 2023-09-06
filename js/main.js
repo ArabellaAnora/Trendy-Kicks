@@ -794,6 +794,8 @@ populateProductDetail();
   
 
 
+// Call the function to populate sizes
+populateSizes();
 
   
 
