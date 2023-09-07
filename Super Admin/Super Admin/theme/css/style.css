@@ -13409,7 +13409,7 @@ label {
   position: relative;
   z-index: 10;
   color: #ffffff;
-  background-color: rgba(158, 109, 224, 0.4);
+  background-color: rgb(255, 186, 0);
 }
 .sidebar .sidebar-inner .section-title {
   padding: 1.25rem 1.56rem 1rem;
