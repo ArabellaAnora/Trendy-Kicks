@@ -2486,8 +2486,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #ffffff;
-  background-color: #9e6de0;
-  border-color: #9e6de0;
+  background-color: #ffba00;
+  border-color: #ffba00;
 }
 .btn-primary:hover {
   color: #ffffff;
@@ -5293,6 +5293,7 @@ a.badge-smoke:focus, a.badge-smoke.focus {
   width: 100%;
   color: #495057;
   text-align: inherit;
+ 
 }
 .list-group-item-action:hover, .list-group-item-action:focus {
   z-index: 1;
@@ -17447,4 +17448,8 @@ html[dir=rtl] .sidebar li > a .caret:before {
 .copyright p {
   font-weight: 500;
 }
-/*# sourceMappingURL=style.css.map */
+
+
+/*====Additional=====*/
+
+
