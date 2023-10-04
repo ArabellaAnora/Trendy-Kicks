@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 
 <!--
  // WEBSITE: https://themefisher.com
@@ -13,7 +13,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>User Profile Settings</title>
+  <title>Payment Methods</title>
+    
+  <!-- theme meta -->
+  <meta name="theme-name" content="mono" />
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Roboto" rel="stylesheet">
@@ -22,6 +25,28 @@
 
   <!-- PLUGINS CSS STYLE -->
   <link href="plugins/nprogress/nprogress.css" rel="stylesheet" />
+  
+  
+  
+  
+  <link href="plugins/DataTables/DataTables-1.10.18/css/jquery.dataTables.min.css" rel="stylesheet" />
+  
+  
+  
+  <link href="plugins/jvectormap/jquery-jvectormap-2.0.3.css" rel="stylesheet" />
+  
+  
+  
+  <link href="plugins/daterangepicker/daterangepicker.css" rel="stylesheet" />
+  
+  
+  
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  
+  
+  
+  <link href="plugins/toaster/toastr.min.css" rel="stylesheet" />
+  
   
   <!-- MONO CSS -->
   <link id="main-css-href" rel="stylesheet" href="css/style.css" />
@@ -51,6 +76,8 @@
     </script>
 
     
+    <div id="toaster"></div>
+    
 
     <!-- ====================================
     ——— WRAPPER
@@ -74,8 +101,6 @@
             <div class="sidebar-left" data-simplebar style="height: 100%;">
               <!-- sidebar menu -->
               <ul class="nav sidebar-inner" id="sidebar-menu">
-                
-
                 
                 <li class="section-title">
                   Dashboard
@@ -106,7 +131,7 @@
                 
 
                 
-                  <li  class="has-sub active expand" >
+                  <li  class="has-sub  expand" >
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#users"
                       aria-expanded="false" aria-controls="users">
                       <i class="mdi mdi-face"></i>
@@ -118,7 +143,7 @@
                         
                         
                           
-                            <li   >
+                            <li  >
                               <a class="sidenav-item-link" href="user-profile.html">
                                 <span class="nav-text">User Profile</span>
                                 
@@ -141,7 +166,7 @@
                         
                         
                           
-                            <li class ="active" >
+                            <li >
                               <a class="sidenav-item-link" href="user-profile-settings.html">
                                 <span class="nav-text">User Profile Settings</span>
                                 
@@ -230,7 +255,7 @@
                   Payment
                 </li>
                  
-                <li
+                <li 
                   >
                    <a class="sidenav-item-link" href="payment-methods.html">
                      <i class=" mdi mdi-package-variant-closed"></i>
@@ -268,7 +293,7 @@
                 
 
                 
-                  <li
+                  <li class="active" 
                   >
                    <a class="sidenav-item-link" href="notifications.html">
                     <i class="mdi mdi-email"></i>
@@ -276,6 +301,13 @@
                    </a>
                  </li>
 
+                        
+
+                        
+                     
+                    </ul>
+                  </li>
+                
 
                 
 
@@ -290,14 +322,8 @@
                     </ul>
                   </li>
                 
-                          
-                          
-                        
 
-                        
-                 
-                    </ul>
-                  </li>
+                  
                 
 
                 
@@ -334,7 +360,7 @@
                 <span class="sr-only">Toggle navigation</span>
               </button>
 
-              <span class="page-title">user profile settings</span>
+              <span class="page-title">Notifications</span>
 
               <div class="navbar-right ">
 
@@ -676,200 +702,64 @@
         <!-- ====================================
         ——— CONTENT WRAPPER
         ===================================== -->
-        <div class="content-wrapper">
-          <div class="content"><!-- Card Profile -->
-<div class="card card-default card-profile">
-
-  <div class="card-header-bg" style="background-image:url(assets/img/user/user-bg-01.jpg)"></div>
-
-  <div class="card-body card-profile-body">
-
-    <div class="profile-avata">
-      <img class="rounded-circle" src="images/user/user-md-01.jpg" alt="Avata Image">
-      <a class="h5 d-block mt-3 mb-2" href="#">Albrecht Straub</a>
-      <a class="d-block text-color" href="#">albercht@example.com</a>
-    </div>
-
-    <ul class="nav nav-profile-follow">
       
 
-    </ul>
-
-    <div class="profile-button">
-      
-    </div>
-
-  </div>
-
-  <div class="card-footer card-profile-footer">
-    <ul class="nav nav-border-top justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link" href="user-profile.html">Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="user-activities.html">Activities</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="user-profile-settings.html">Settings</a>
-      </li>
-
-    </ul>
-  </div>
-
-</div>
-
-<div class="row">
-  <div class="col-xl-3">
-    <!--  -->
-    <div class="card card-default">
-      <div class="card-header">
-        <h2>Settings</h2>
-      </div>
-
-      <div class="card-body pt-0">
-        <ul class="nav nav-settings">
-          <li class="nav-item">
-            <a class="nav-link active" href="user-profile-settings.html">
-              <i class="mdi mdi-account-outline mr-1"></i> Profile
-            </a>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-action">
+            <div class="media media-sm mb-0">
+              <div class="media-sm-wrapper bg-primary">
+                <i class="mdi mdi-star-outline"></i>
+              </div>
+              <div class="media-body">
+                <span class="title">The stars are twinkling.</span>
+                <p>Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid at highly months
+                  do things
+                  on at.</p>
+              </div>
+            </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user-account-settings.html">
-              <i class="mdi mdi-settings-outline mr-1"></i> Account
-            </a>
+          <li class="list-group-item list-group-item-action">
+            <div class="media media-sm mb-0">
+              <div class="media-sm-wrapper bg-success">
+                <i class="mdi mdi-pencil"></i>
+              </div>
+              <div class="media-body">
+                <span class="title">This is a Japanese doll.</span>
+                <p>Marianne or husbands if at stronger ye. Considered is as middletons uncommonly. Promotion perfectly ye
+                  consisted so.
+                </p>
+              </div>
+            </div>
           </li>
-          
-          
-         
+          <li class="list-group-item list-group-item-action">
+            <div class="media media-sm mb-0">
+              <div class="media-sm-wrapper bg-danger">
+                <i class="mdi mdi-square-edit-outline"></i>
+              </div>
+              <div class="media-body">
+                <span class="title">Support Ticket</span>
+                <p>Unpleasant nor diminution excellence apartments imprudence the met new. Draw part them he an to he roof only.
+                  Music
+                  leave say doors him.</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-group-item-action">
+            <div class="media media-sm mb-0">
+              <div class="media-sm-wrapper bg-info">
+                <i class="mdi mdi-diamond-outline"></i>
+              </div>
+              <div class="media-body">
+                <span class="title">New Order</span>
+                <p>Farther related bed and passage comfort civilly. Dashwoods see frankness objection abilities the. As hastened
+                  oh
+                  produced prospect formerly up am.</p>
+              </div>
+            </div>
+          </li>
         </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-xl-9">
-    <div class="card card-default">
-      <div class="card-header">
-        <h2 class="mb-5">Profile Settings</h2>
-
-      </div>
-
-      <div class="card-body">
-        <div class="media media-sm">
-          
-        </div>
-        <form>
-          <div class="form-group row mb-6">
-            <label for="coverImage" class="col-sm-4 col-lg-2 col-form-label">Profile Picture</label>
-            <div class="col-sm-8 col-lg-10">
-              <div class="custom-file mb-1">
-                <input type="file" class="custom-file-input" id="coverImage" required>
-                <label class="custom-file-label" for="coverImage">Choose file...</label>
-                <div class="invalid-feedback">Example invalid custom file feedback</div>
-              </div>
-              <span class="d-block ">Upload a new profile picture, JPG 1200x300</span>
-            </div>
-          </div>
-
-          <div class="form-group row mb-6">
-            <label for="coverImage" class="col-sm-4 col-lg-2 col-form-label">Cover Image</label>
-            <div class="col-sm-8 col-lg-10">
-              <div class="custom-file mb-1">
-                <input type="file" class="custom-file-input" id="coverImage" required>
-                <label class="custom-file-label" for="coverImage">Choose file...</label>
-                <div class="invalid-feedback">Example invalid custom file feedback</div>
-              </div>
-              <span class="d-block ">Upload a new cover image, JPG 1200x300</span>
-            </div>
-          </div>
-
-
-      
-          <div class="d-flex justify-content-end">
-            <button type="submit" class="btn btn-primary mb-2 btn-pill">Update Profile</button>
-          </div>
-
-        </form>
-      </div>
-    </div>
-
-    <div class="card card-default">
-
-      <div class="card-header">
-        <h2>Social Networks</h2>
-
-      </div>
-
-      <div class="card-body">
-        <div class="media media-sm">
-          <div class="media-body">
-            <div class="row">
-
-              <div class="col-lg-6">
-
-                <div class="d-flex mb-5">
-                  <button type="button" class="btn btn-icon facebook mr-2">
-                    <i class="mdi mdi-facebook"></i>
-                  </button>
-                  <input type="text" class="form-control" placeholder="Facebook username">
-                </div>
-
-                <div class="d-flex mb-5">
-                  <button type="button" class="btn btn-icon google-plus mr-2">
-                    <i class="mdi mdi-google-plus"></i>
-                  </button>
-                  <input type="text" class="form-control" placeholder="Google plus username">
-                </div>
-
-                <div class="d-flex mb-5">
-                  <button type="button" class="btn btn-icon vimeo mr-2">
-                    <i class="mdi mdi-vimeo"></i>
-                  </button>
-                  <input type="text" class="form-control" placeholder="Vimeo username">
-                </div>
-
-              </div>
-
-              <div class="col-lg-6">
-
-                <div class="d-flex mb-5">
-                  <button type="button" class="btn btn-icon twitter mr-2">
-                    <i class="mdi mdi-twitter"></i>
-                  </button>
-                  <input type="text" class="form-control" placeholder="Twitter username">
-                </div>
-
-                <div class="d-flex mb-5">
-                  <button type="button" class="btn btn-icon linkedin mr-2">
-                    <i class="mdi mdi-linkedin"></i>
-                  </button>
-                  <input type="text" class="form-control" placeholder="Linkedin username">
-                </div>
-
-                <div class="d-flex mb-5">
-                  <button type="button" class="btn btn-icon pinterest mr-2">
-                    <i class="mdi mdi-pinterest"></i>
-                  </button>
-                  <input type="text" class="form-control" placeholder="Pinterest username">
-                </div>
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-
-  </div>
-
-</div>
-
-
-</div>
-          
-        </div>
+        
+        
         
           <!-- Footer -->
           <footer class="footer mt-auto">
@@ -996,6 +886,51 @@
                     <script src="plugins/simplebar/simplebar.min.js"></script>
                     <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
 
+                    
+                    
+                    <script src="plugins/apexcharts/apexcharts.js"></script>
+                    
+                    
+                    
+                    <script src="plugins/DataTables/DataTables-1.10.18/js/jquery.dataTables.min.js"></script>
+                    
+                    
+                    
+                    <script src="plugins/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+                    <script src="plugins/jvectormap/jquery-jvectormap-world-mill.js"></script>
+                    <script src="plugins/jvectormap/jquery-jvectormap-us-aea.js"></script>
+                    
+                    
+                    
+                    <script src="plugins/daterangepicker/moment.min.js"></script>
+                    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+                    <script>
+                      jQuery(document).ready(function() {
+                        jQuery('input[name="dateRange"]').daterangepicker({
+                        autoUpdateInput: false,
+                        singleDatePicker: true,
+                        locale: {
+                          cancelLabel: 'Clear'
+                        }
+                      });
+                        jQuery('input[name="dateRange"]').on('apply.daterangepicker', function (ev, picker) {
+                          jQuery(this).val(picker.startDate.format('MM/DD/YYYY'));
+                        });
+                        jQuery('input[name="dateRange"]').on('cancel.daterangepicker', function (ev, picker) {
+                          jQuery(this).val('');
+                        });
+                      });
+                    </script>
+                    
+                    
+                    
+                    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+                    
+                    
+                    
+                    <script src="plugins/toaster/toastr.min.js"></script>
+
+                    
                     
                     <script src="js/mono.js"></script>
                     <script src="js/chart.js"></script>
