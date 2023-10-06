@@ -57,7 +57,7 @@ if (splinaArea1 !== null) {
       group: "social",
       height: 135,
       width: "100%",
-      background: "#fd5190",
+      background: "#6696fe",
       type: "area",
       sparkline: {
         enabled: true,
@@ -119,7 +119,7 @@ if (splinaArea2 !== null) {
       group: "social",
       height: 135,
       width: "100%",
-      background: "#46c79e",
+      background: "#FF0000",
       type: "area",
       sparkline: {
         enabled: true,
@@ -180,7 +180,7 @@ if (splinaArea3 !== null) {
       group: "social",
       height: 135,
       width: "100%",
-      background: "#9e6de0",
+      background: "#46c79e",
       type: "area",
       sparkline: {
         enabled: true,
@@ -241,7 +241,7 @@ if (splinaArea4 !== null) {
       group: "social",
       height: 135,
       width: "100%",
-      background: "#6696fe",
+      background: "#FFA500",
       type: "area",
       sparkline: {
         enabled: true,
