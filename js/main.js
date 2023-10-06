@@ -603,6 +603,7 @@ $(document).ready(function(){
     price: "₱999.00",
     availability: "In-Stock",
     category: "Men (Casual)"
+
   },
 
   {
@@ -758,15 +759,21 @@ function populateProductDetail() {
               <!-- Add more product details here if needed -->
           </ul>
           <p>${selectedProduct.description}</p>
+          
           <div class="product_count">
-              <!-- Add quantity selection and other product-related elements here if needed -->
+          
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" class="form-control" value="1" min="1">
+         
           </div>
+         
           <div class="card_area d-flex align-items-center">
               <a class="primary-btn" href="#">Add to Cart</a>
               <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
               <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
           </div>
       `;
+      
       const imageCarousel = productImageCarousel.querySelector(".s_Product_carousel");
 
       // Clear existing carousel items
@@ -796,7 +803,6 @@ populateProductDetail();
 
 // Call the function to populate sizes
 populateSizes();
-
   
 
 
