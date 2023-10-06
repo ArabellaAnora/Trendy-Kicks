@@ -13,7 +13,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>User Account Settings</title>
+  <title>Payment Methods</title>
+    
+  <!-- theme meta -->
+  <meta name="theme-name" content="mono" />
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Roboto" rel="stylesheet">
@@ -22,6 +25,28 @@
 
   <!-- PLUGINS CSS STYLE -->
   <link href="plugins/nprogress/nprogress.css" rel="stylesheet" />
+  
+  
+  
+  
+  <link href="plugins/DataTables/DataTables-1.10.18/css/jquery.dataTables.min.css" rel="stylesheet" />
+  
+  
+  
+  <link href="plugins/jvectormap/jquery-jvectormap-2.0.3.css" rel="stylesheet" />
+  
+  
+  
+  <link href="plugins/daterangepicker/daterangepicker.css" rel="stylesheet" />
+  
+  
+  
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  
+  
+  
+  <link href="plugins/toaster/toastr.min.css" rel="stylesheet" />
+  
   
   <!-- MONO CSS -->
   <link id="main-css-href" rel="stylesheet" href="css/style.css" />
@@ -51,6 +76,8 @@
     </script>
 
     
+    <div id="toaster"></div>
+    
 
     <!-- ====================================
     ——— WRAPPER
@@ -66,8 +93,7 @@
             <!-- Aplication Brand -->
             <div class="app-brand">
               <a href="/index.html">
-                <img src="/Trendy Kicks/img/trendykickslogo-nobg.png" alt="Mono">
-                <span class="brand-name">SUDO</span>
+                <span class="brand-name">ADMIN</span>
               </a>
             </div>
             <!-- begin sidebar scrollbar -->
@@ -75,43 +101,36 @@
               <!-- sidebar menu -->
               <ul class="nav sidebar-inner" id="sidebar-menu">
                 
-
-                
                 <li class="section-title">
                   Dashboard
-                </li>  
+                </li>
                 
                   <li
+                   class=
                    >
                     <a class="sidenav-item-link" href="index.html">
                       <i class="mdi mdi-briefcase-account-outline"></i>
-                      <span class="nav-text">Business Dashboard</span>
-                    </a>
-                  </li>
-                
-
-                
-
-                
-                  <li
-                   >
-                    <a class="sidenav-item-link" href="analytics.html">
-                      <i class="mdi mdi-chart-line"></i>
                       <span class="nav-text">Analytics and Reporting</span>
                     </a>
                   </li>
                 
 
                 
+
+                
+                  
+
+                  
+                
                   <li class="section-title">
-                    User Management
+                    Users
                   </li>
                 
 
                 
 
                 
-                  <li  class="has-sub active expand" >
+                  <li  class="has-sub  expand" >
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#users"
                       aria-expanded="false" aria-controls="users">
                       <i class="mdi mdi-face"></i>
@@ -123,13 +142,12 @@
                         
                         
                           
-                            <li   >
+                            <li  >
                               <a class="sidenav-item-link" href="user-profile.html">
                                 <span class="nav-text">User Profile</span>
                                 
                               </a>
                             </li>
-                          
                         
 
                         
@@ -159,121 +177,51 @@
                         
                         
                           
-                            <li class="active">
+                            <li >
                               <a class="sidenav-item-link" href="user-account-settings.html">
                                 <span class="nav-text">User Account Settings</span>
                                 
                               </a>
                             </li>
                           
-                        
+                                    
+                             
 
                         
                         
                           
-                            <li >
-                              <a class="sidenav-item-link" href="user-planing-settings.html">
-                                <span class="nav-text">User Planing Settings</span>
-                                
-                              </a>
-                            </li>
-                          
-                        
-
-                        
-                        
-                          
-                            <li >
-                              <a class="sidenav-item-link" href="user-billing.html">
-                                <span class="nav-text">User billing</span>
-                                
-                              </a>
-                            </li>
-                          
-                        
-
-                        
-                        
-                          
-                            <li >
-                              <a class="sidenav-item-link" href="user-notify-settings.html">
-                                <span class="nav-text">User Notify Settings</span>
-                                
-                              </a>
-                            </li>
-                          
+                           
                         
 
                         
                       </div>
                     </ul>
                   </li>
-                
+
+                  <li
+                  >
+                  <a class="sidenav-item-link" href="teams-other-users.html">
+                    <i class="mdi mdi-account"></i>
+                    <span class="nav-text">Team</span>
+                  </a>
+                </li>
+              
 
                 
-
-                
-                  <li  class="has-sub" >
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#authentication"
-                      aria-expanded="false" aria-controls="authentication">
-                      <i class="mdi mdi-account"></i>
-                      <span class="nav-text">Authentication</span> <b class="caret"></b>
-                    </a>
-                    <ul  class="collapse"  id="authentication"
-                      data-parent="#sidebar-menu">
-                      <div class="sub-menu">
-                        
-                        
-                          
-                            <li >
-                              <a class="sidenav-item-link" href="sign-in.html">
-                                <span class="nav-text">Sign In</span>
-                                
-                              </a>
-                            </li>
-                          
-                        
-
-                        
-                        
-                          
-                            <li >
-                              <a class="sidenav-item-link" href="sign-up.html">
-                                <span class="nav-text">Sign Up</span>
-                                
-                              </a>
-                            </li>
-                          
-                        
-
-                        
-                        
-                          
-                            <li >
-                              <a class="sidenav-item-link" href="reset-password.html">
-                                <span class="nav-text">Reset Password</span>
-                                
-                              </a>
-                            </li>
-                          
-                        
-
-                        
-                      </div>
-                    </ul>
-                  </li>
                 
 
-                
+                 
 
                 
+                  
+
                   <li class="section-title">
                     Product Inventory
                   </li>
 
                   <li
                   >
-                   
+                  <a class="sidenav-item-link" href="inventory.html">
                      <i class=" mdi mdi-package-variant-closed"></i>
                      <span class="nav-text">Inventory</span>
                    </a>
@@ -281,12 +229,12 @@
                
 
                  <li class="section-title">
-                  Order Management
+                  Order Fulfillment
                 </li>
                  
                 <li
                   >
-                   <a class="sidenav-item-link" href="getting-started.html">
+                   <a class="sidenav-item-link" href="order-status.html">
                      <i class=" mdi mdi-playlist-check"></i>
                      <span class="nav-text">Order Status</span>
                    </a>
@@ -294,21 +242,21 @@
 
 
                  <li
-                  >
-                   <a class="sidenav-item-link" href="getting-started.html">
-                     <i class=" mdi mdi-paypal"></i>
-                     <span class="nav-text">Transaction History</span>
-                   </a>
-                 </li>
+                 >
+                  <a class="sidenav-item-link" href="transaction-history.html">
+                    <i class=" mdi mdi-paypal"></i>
+                    <span class="nav-text">Transaction History</span>
+                  </a>
+                </li>
                 
 
                  <li class="section-title">
                   Payment
                 </li>
                  
-                <li
+                <li class="active" 
                   >
-                   <a class="sidenav-item-link" href="getting-started.html">
+                   <a class="sidenav-item-link" href="payment-methods.html">
                      <i class=" mdi mdi-package-variant-closed"></i>
                      <span class="nav-text">Payment Method</span>
                    </a>
@@ -325,110 +273,46 @@
                 
 
                 
-                  <li
-                   >
-                    <a class="sidenav-item-link" href="chat.html">
-                      <i class="mdi mdi-wechat"></i>
-                      <span class="nav-text">Chat</span>
-                    </a>
-                  </li>
+                 
                 
+
+                
+
+               
+
+                
+
+                
+                 
+                
+
+                
+                 
 
                 
 
                 
                   <li
-                   >
-                    <a class="sidenav-item-link" href="contacts.html">
-                      <i class="mdi mdi-phone"></i>
-                      <span class="nav-text">Contacts</span>
-                    </a>
-                  </li>
-                
+                  >
+                   <a class="sidenav-item-link" href="notifications.html">
+                    <i class="mdi mdi-email"></i>
+                     <span class="nav-text">Notifications</span>
+                   </a>
+                 </li>
 
                 
 
-                
-                  <li
-                   >
-                    <a class="sidenav-item-link" href="team.html">
-                      <i class="mdi mdi-account-group"></i>
-                      <span class="nav-text">Team</span>
-                    </a>
-                  </li>
-                
 
                 
 
-                
-                  <li
-                   >
-                    <a class="sidenav-item-link" href="calendar.html">
-                      <i class="mdi mdi-calendar-check"></i>
-                      <span class="nav-text">Calendar</span>
-                    </a>
-                  </li>
-                
-
-                
-
-                
-                  <li  class="has-sub" >
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#email"
-                      aria-expanded="false" aria-controls="email">
-                      <i class="mdi mdi-email"></i>
-                      <span class="nav-text">email</span> <b class="caret"></b>
-                    </a>
-                    <ul  class="collapse"  id="email"
-                      data-parent="#sidebar-menu">
-                      <div class="sub-menu">
-                        
-                        
-                          
-                            <li >
-                              <a class="sidenav-item-link" href="email-inbox.html">
-                                <span class="nav-text">Email Inbox</span>
-                                
-                              </a>
-                            </li>
-                          
-                        
 
                         
-                        
-                          
-                            <li >
-                              <a class="sidenav-item-link" href="email-details.html">
-                                <span class="nav-text">Email Details</span>
-                                
-                              </a>
-                            </li>
-                          
-                        
-
-                        
-                        
-                          
-                            <li >
-                              <a class="sidenav-item-link" href="email-compose.html">
-                                <span class="nav-text">Email Compose</span>
-                                
-                              </a>
-                            </li>
-                          
-                        
-
-                        
-                      </div>
+                     
                     </ul>
                   </li>
-                          
-                        
+                
 
-                        
-                      
-                    </ul>
-                  </li>
+                  
                 
 
                 
@@ -465,7 +349,7 @@
                 <span class="sr-only">Toggle navigation</span>
               </button>
 
-              <span class="page-title">user account settings</span>
+              <span class="page-title">Payment Methods</span>
 
               <div class="navbar-right ">
 
@@ -807,172 +691,103 @@
         <!-- ====================================
         ——— CONTENT WRAPPER
         ===================================== -->
-        <div class="content-wrapper">
-          <div class="content"><!-- Card Profile -->
-<div class="card card-default card-profile">
-
-  <div class="card-header-bg" style="background-image:url(assets/img/user/user-bg-01.jpg)"></div>
-
-  <div class="card-body card-profile-body">
-
-    <div class="profile-avata">
-      <img class="rounded-circle" src="images/user/user-md-01.jpg" alt="Avata Image">
-      <a class="h5 d-block mt-3 mb-2" href="#">Albrecht Straub</a>
-      <a class="d-block text-color" href="#">albercht@example.com</a>
-    </div>
-
-    <ul class="nav nav-profile-follow">
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span class="h5 d-block">1503</span>
-          <span class="text-color d-block">Friends</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span class="h5 d-block">2905</span>
-          <span class="text-color d-block">Followers</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span class="h5 d-block">1200</span>
-          <span class="text-color d-block">Following</span>
-        </a>
-      </li>
-
-    </ul>
-
-    <div class="profile-button">
-      <a class="btn btn-primary btn-pill" href="user-planing-settings.html">Upgrade Plan</a>
-    </div>
-
-  </div>
-
-  <div class="card-footer card-profile-footer">
-    <ul class="nav nav-border-top justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link" href="user-profile.html">Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="user-activities.html">Activities</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="user-profile-settings.html">Settings</a>
-      </li>
-
-    </ul>
-  </div>
-
-</div>
-
-<div class="row">
-  <div class="col-xl-3">
-    <!-- Settings -->
-    <div class="card card-default">
-      <div class="card-header">
-        <h2>Settings</h2>
+      
+    <ul class="list-group">
+    <li class="list-group-item list-group-item-action">
+    <div class="media media-sm mb-0">
+      <div class="media-sm-wrapper">
+        <img src="images/payment-methods-logos/bdo.jpg" alt="User Image">
       </div>
-
-      <div class="card-body pt-0">
-
-        <ul class="nav nav-settings">
-          <li class="nav-item">
-            <a class="nav-link" href="user-profile-settings.html">
-              <i class="mdi mdi-account-outline mr-1"></i> Profile
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="user-account-settings.html">
-              <i class="mdi mdi-settings-outline mr-1"></i> Account
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user-planing-settings.html">
-              <i class="mdi mdi-currency-usd mr-1"></i> Planing
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user-billing.html">
-              <i class="mdi mdi-set-top-box mr-1"></i> Billing
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user-notify-settings.html">
-              <i class="mdi mdi-bell-outline mr-1"></i> Notifications
-            </a>
-          </li>
-        </ul>
-
+      <div class="media-body">
+        <span class="title">BDO</span>
+        <p>Banco De Oro</p>
       </div>
-
-    </div>
-  </div>
-  <div class="col-xl-9">
-    <!-- Account Settings -->
-    <div class="card card-default">
-      <div class="card-header">
-        <h2 class="mb-5">Account Settings</h2>
-
-      </div>
-
-      <div class="card-body">
-
-        <form>
-          <div class="row mb-2">
-            <div class="col-lg-6">
-              <div class="form-group">
-                <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName" >
-              </div>
-            </div>
-
-            <div class="col-lg-6">
-              <div class="form-group">
-                <label for="lastName">Last name</label>
-                <input type="text" class="form-control" id="lastName">
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group mb-4">
-            <label for="userName">User name</label>
-            <input type="text" class="form-control" id="userName">
-            <span class="d-block mt-1">Accusamus nobis at omnis consequuntur culpa tempore saepe animi.</span>
-          </div>
-
-          <div class="form-group mb-4">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email">
-          </div>
-
-          <div class="form-group mb-4">
-            <label for="newPassword">New password</label>
-            <input type="password" class="form-control" id="newPassword">
-          </div>
-
-          <div class="form-group mb-4">
-            <label for="conPassword">Confirm password</label>
-            <input type="password" class="form-control" id="conPassword">
-          </div>
-
-          <div class="d-flex justify-content-end mt-6">
-            <button type="submit" class="btn btn-primary mb-2 btn-pill">Update Profile</button>
-          </div>
-
-        </form>
+      <div class="custom-control custom-switch align-self-center">
+        <input type="checkbox" class="custom-control-input" id="customCheck1">
+        <label class="custom-control-label" for="customCheck1"></label>
       </div>
     </div>
+  </li>
+  <li class="list-group-item list-group-item-action">
+    <div class="media media-sm mb-0">
+      <div class="media-sm-wrapper">
+        <img src="images/payment-methods-logos/metrobank.png" alt="User Image">
+      </div>
+      <div class="media-body">
+        <span class="title">Metro Bank</span>
+        <p>Metropolitan Bank & Trust Company
+        </p>
+      </div>
+      <div class="custom-control custom-switch align-self-center">
+        <input type="checkbox" class="custom-control-input" id="customCheck2">
+        <label class="custom-control-label" for="customCheck2"></label>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-action">
+    <div class="media media-sm mb-0">
+      <div class="media-sm-wrapper">
+        <img src="images/payment-methods-logos/bpi.jpg" alt="User Image">
+      </div>
+      <div class="media-body">
+        <span class="title">BPI</span>
+        <p>Bank of the Philippine Islands</p>
+      </div>
+      <div class="custom-control custom-switch align-self-center">
+        <input type="checkbox" class="custom-control-input" id="customCheck3">
+        <label class="custom-control-label" for="customCheck3"></label>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-action">
+    <div class="media media-sm mb-0">
+      <div class="media-sm-wrapper">
+        <img src="images/payment-methods-logos/gcash.png" alt="User Image">
+      </div>
+      <div class="media-body">
+        <span class="title">GCASH</span>
+        <p>Mobile Wallet App</p>
+      </div>
+      <div class="custom-control custom-switch align-self-center">
+        <input type="checkbox" class="custom-control-input" id="customCheck4">
+        <label class="custom-control-label" for="customCheck4"></label>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-action">
+    <div class="media media-sm mb-0">
+      <div class="media-sm-wrapper">
+        <img src="images/payment-methods-logos/securitybank.png" alt="User Image">
+      </div>
+      <div class="media-body">
+        <span class="title">Security Bank</span>
+        <p>Security Bank Corporation</p>
+      </div>
+      <div class="custom-control custom-switch align-self-center">
+        <input type="checkbox" class="custom-control-input" id="customCheck3">
+        <label class="custom-control-label" for="customCheck3"></label>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-action">
+    <div class="media media-sm mb-0">
+      <div class="media-sm-wrapper">
+        <img src="images/payment-methods-logos/maya.png" alt="User Image">
+      </div>
+      <div class="media-body">
+        <span class="title">Maya</span>
+        <p>Formerly known as PayMaya</p>
+      </div>
+      <div class="custom-control custom-switch align-self-center">
+        <input type="checkbox" class="custom-control-input" id="customCheck3">
+        <label class="custom-control-label" for="customCheck3"></label>
+      </div>
+    </div>
+  </li>
+</ul>
 
-
-
-
-  </div>
-
-</div>
-</div>
-          
-        </div>
+        
+        
         
           <!-- Footer -->
           <footer class="footer mt-auto">
@@ -1099,6 +914,51 @@
                     <script src="plugins/simplebar/simplebar.min.js"></script>
                     <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
 
+                    
+                    
+                    <script src="plugins/apexcharts/apexcharts.js"></script>
+                    
+                    
+                    
+                    <script src="plugins/DataTables/DataTables-1.10.18/js/jquery.dataTables.min.js"></script>
+                    
+                    
+                    
+                    <script src="plugins/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+                    <script src="plugins/jvectormap/jquery-jvectormap-world-mill.js"></script>
+                    <script src="plugins/jvectormap/jquery-jvectormap-us-aea.js"></script>
+                    
+                    
+                    
+                    <script src="plugins/daterangepicker/moment.min.js"></script>
+                    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+                    <script>
+                      jQuery(document).ready(function() {
+                        jQuery('input[name="dateRange"]').daterangepicker({
+                        autoUpdateInput: false,
+                        singleDatePicker: true,
+                        locale: {
+                          cancelLabel: 'Clear'
+                        }
+                      });
+                        jQuery('input[name="dateRange"]').on('apply.daterangepicker', function (ev, picker) {
+                          jQuery(this).val(picker.startDate.format('MM/DD/YYYY'));
+                        });
+                        jQuery('input[name="dateRange"]').on('cancel.daterangepicker', function (ev, picker) {
+                          jQuery(this).val('');
+                        });
+                      });
+                    </script>
+                    
+                    
+                    
+                    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+                    
+                    
+                    
+                    <script src="plugins/toaster/toastr.min.js"></script>
+
+                    
                     
                     <script src="js/mono.js"></script>
                     <script src="js/chart.js"></script>

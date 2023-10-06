@@ -2486,8 +2486,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #ffffff;
-  background-color: #9e6de0;
-  border-color: #9e6de0;
+  background-color: #ffba00;
+  border-color: #ffba00;
 }
 .btn-primary:hover {
   color: #ffffff;
@@ -5293,6 +5293,7 @@ a.badge-smoke:focus, a.badge-smoke.focus {
   width: 100%;
   color: #495057;
   text-align: inherit;
+ 
 }
 .list-group-item-action:hover, .list-group-item-action:focus {
   z-index: 1;
@@ -12787,7 +12788,7 @@ code {
 
 /* Header Light */
 .navbar.navbar-light {
-  background-color: #ffba00;
+  background-color: #ffffff;
   border-color: #e5e9f2;
 }
 .navbar.navbar-light .sidebar-toggle {
@@ -13382,8 +13383,7 @@ label {
   height: 100%;
   z-index: 1050;
   min-height: 100vh;
-  position: relative
-  ;
+  position: relative;
 }
 .sidebar .sidebar-inner {
   display: flex;
@@ -14309,7 +14309,7 @@ label {
   color: #646a77;
 }
 .left-sidebar.sidebar-light .sidebar .sidebar-inner > li.active > a {
-  background-color: #ffba00;
+  background-color: #9e6de0;
   color: #ffffff;
 }
 .left-sidebar.sidebar-light .sidebar .sidebar-inner .section-title {
@@ -17449,5 +17449,7 @@ html[dir=rtl] .sidebar li > a .caret:before {
   font-weight: 500;
 }
 
+
+/*====Additional=====*/
 
 
